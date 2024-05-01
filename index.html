@@ -96,8 +96,10 @@
         const line7 = [x1, y1, cx, cy];
         const line8 = [x0, y1, cx, cy];
 
+
         function drawLine(line) {
             const ln = [line1,line2,line3,line4,line5,line6,line7,line8][line-1];
+            ctx.strokeStyle = '#0f3';
             ctx.moveTo(ln[0],ln[1]);
             ctx.lineTo(ln[2],ln[3]);
             ctx.stroke();
@@ -115,9 +117,12 @@ window.onload = () => {
 </script>
 
 <style>
+    body {
+        background: rgb(24, 21, 51);
+    }
     canvas {
         float: left;
-        margin: 10px;
+        margin: 8px;
     }
 </style>
 
