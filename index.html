@@ -75,10 +75,14 @@
 
     function draw(n) {
         const canvas = document.createElement('canvas');
+        const div = document.createElement('div');
+        const input = document.createElement('input');
         const ctx = canvas.getContext('2d');
         canvas.width = 50;
         canvas.height = canvas.width;
-        document.body.appendChild(canvas);
+        document.body.appendChild(div);
+        div.appendChild(canvas);
+        div.appendChild(input);
 
         const x0 = 0;
         const y0 = 0;
@@ -121,8 +125,28 @@ window.onload = () => {
         background: rgb(24, 21, 51);
     }
     canvas {
+        margin: 4px;
+    }
+    div {
+        padding:4px;
         float: left;
-        margin: 8px;
+        border: 1px solid red;
+    }
+    input {
+        display:block;
+        margin-top: 10px;
+        width: 60px;
+        border: 0;
+        background: grey;
+        color: white;
+        border-radius: 6px;
+        outline: 0;
+        text-transform: capitalize;
+        font-size:14pt;
+        &:hover, &:focus {
+            background: rgb(27, 194, 130);
+            color: navy;
+        }
     }
 </style>
 
